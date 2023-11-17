@@ -25,7 +25,7 @@ To use the `GPTVAR` class, follow these steps:
     typescriptCopy code
     
     ```
-    import GPTVAR from 'pt-var';`
+    import GPTVAR from 'gpt-var';
     ``` 
     
 3.  **Creating an Instance** Create an instance of the `GPTVAR` class by passing your OpenAI API key and optionally the model you want to use:
