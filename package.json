@@ -1,7 +1,7 @@
 {
   "name": "gpt-var",
   "version": "1.0.4",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "type": "module",
   "scripts": {
