@@ -29,10 +29,11 @@ To use the `GPTVAR` class, follow these steps:
     ``` 
     
 3.  **Creating an Instance** Create an instance of the `GPTVAR` class by passing your OpenAI API key and optionally the model you want to use:
-    
+        [model name list](https://platform.openai.com/docs/models/overview)
     ```
     const gptVar = new GPTVAR('your-openai-api-key', 'model-name');
-    ``` 
+    ```
+
     
 4.  **Sending a Prompt** To send a prompt to the model, call the `prompt` method with your message and the desired format. The `format` argument can be 'any', 'object', or 'array', depending on how you want to process the response.
     
