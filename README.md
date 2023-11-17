@@ -13,7 +13,7 @@
 ## Installation
 
 ```
-npm install gpt-var
+npm install gpt-var
 ```
 
 ## Quick Start
