@@ -1,0 +1,28 @@
+{
+  "name": "gpt-var",
+  "version": "1.0.3",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "require": "./src/index.cjs"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.9.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "openai": "^4.19.0"
+  }
+}
