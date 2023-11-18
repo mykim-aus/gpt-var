@@ -1,5 +1,5 @@
 
-# README for GPTVAR Class
+# README for GPTVAR
 
 ## Overview
 
