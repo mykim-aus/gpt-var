@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2018",
+    "module": "ESNext",
     "declaration": true,
     "outDir": "./dist",
+    "esModuleInterop": true,
     "strict": true,
-    "esModuleInterop": true
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
