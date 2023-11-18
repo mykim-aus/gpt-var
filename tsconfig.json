@@ -4,7 +4,8 @@
     "target": "es2018",
     "module": "ESNext",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./dist/types",
+    "declarationDir": "./dist/types",
     "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true

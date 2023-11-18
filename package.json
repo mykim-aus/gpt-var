@@ -3,11 +3,11 @@
   "version": "1.0.11",
   "main": "src/index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "tsc && npm run build:cjs",
-    "build:cjs": "tsc --module commonjs --outDir ./dist/cjs"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/types/index.d.ts"
     }
   },
   "files": [
