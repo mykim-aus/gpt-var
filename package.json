@@ -33,7 +33,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "form-data": "^4.0.0",
     "openai": "^4.19.0"
   }
 }
