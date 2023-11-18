@@ -1,13 +1,13 @@
-import express from "express";
-import bodyParser from "body-parser";
-import GPTVAR from "gpt-var";
-import "dotenv/config";
-// const express = require("express");
-// const bodyParser = require("body-parser");
-// const GPTVAR = require("gpt-var");
-// console.log(GPTVAR);
+// import express from "express";
+// import bodyParser from "body-parser";
+// import GPTVAR from "gpt-var";
+// import "dotenv/config";
+const express = require("express");
+const bodyParser = require("body-parser");
+const GPTVAR = require("gpt-var");
+console.log(GPTVAR);
 
-// require("dotenv").config();
+require("dotenv").config();
 
 const app = express();
 const port = 3030;
@@ -22,22 +22,20 @@ app.get("/getArray", async (req, res) => {
 
     res.send(`OpenAI Response: ${JSON.stringify(response)}`);
   } catch (error) {
-    res.status(500).send(error);
+    console.log(error);
   }
 });
 
 app.get("/getJson", async (req, res) => {
   try {
     const response = await gpt.prompt(
-      `please dummy user object which has "name" and "age" keys`,
-      "abc"
+      `please dummy userData object which has "name" and "age" keys`,
+      "object"
     );
-
-    console.log(response);
 
     res.send(`OpenAI Response: ${JSON.stringify(response)}`);
   } catch (error) {
-    res.status(500).send(error);
+    console.log(error);
   }
 });
 
