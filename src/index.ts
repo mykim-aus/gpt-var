@@ -32,11 +32,11 @@ export default class GPTVAR {
   }
 
   processResponse(response: any, format: string): any {
-    const validFormats = ["any", "array", "object"];
+    const validFormats = ["any", "array", "object", "objectInArray"];
 
     if (!validFormats.includes(format)) {
       throw new Error(
-        "Invalid format. Please use 'any', 'array', or 'object'."
+        "Invalid format. Please use 'any', 'array', 'object', or 'objectInArray'."
       );
     }
 
@@ -52,7 +52,22 @@ export default class GPTVAR {
   }
 
   extractAndParse(content: string, format: string): any {
-    const regex = format === "object" ? /{.*}/s : /\[.*\]/s;
+    let regex;
+
+    switch (format) {
+      case "object":
+        regex = /{.*}/s;
+        break;
+      case "array":
+        regex = /\[.*\]/s;
+        break;
+      case "objectInArray":
+        regex = /\[{.*}\]/s;
+        break;
+      default:
+        return false;
+    }
+
     const match = content.match(regex);
 
     if (match) {
