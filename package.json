@@ -3,6 +3,7 @@
   "version": "1.0.10",
   "main": "src/index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "build": "tsc && npm run build:cjs",
