@@ -565,12 +565,11 @@
   dependencies:
     "get-intrinsic" "^1.1.3"
 
-"gpt-var@^1.0.6":
-  "integrity" "sha512-f0e1jdEsvK57IvnZgihQadHZJuzXeWrMHzVYppfU176fIWGxuGlAsHI3vd4KM4WkPbhJUsaZ8azyA2xjDls2IQ=="
-  "resolved" "https://registry.npmjs.org/gpt-var/-/gpt-var-1.0.6.tgz"
-  "version" "1.0.6"
+"gpt-var@^1.0.21":
+  "integrity" "sha512-2aGcZWZbi/W37ui3SyuIyfRBV9Jaudr4jGf04VZQOMq8Tw+V7RbUqMak30q084WIIK7tt1xpq9wDPBG0IoCSZQ=="
+  "resolved" "https://registry.npmjs.org/gpt-var/-/gpt-var-1.0.21.tgz"
+  "version" "1.0.21"
   dependencies:
-    "form-data" "^4.0.0"
     "openai" "^4.19.0"
 
 "has-flag@^3.0.0":
