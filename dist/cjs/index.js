@@ -74,3 +74,4 @@ class GPTVAR {
     }
 }
 exports.default = GPTVAR;
+module.exports = GPTVAR;

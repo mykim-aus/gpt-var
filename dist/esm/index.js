@@ -1,5 +1,5 @@
 import { OpenAI } from "openai";
-export default class GPTVAR {
+class GPTVAR {
     constructor(apiKey, model = "gpt-3.5-turbo") {
         this.openai = new OpenAI({ apiKey });
         this.model = model;
@@ -71,3 +71,5 @@ export default class GPTVAR {
         return false;
     }
 }
+export default GPTVAR;
+module.exports = GPTVAR;

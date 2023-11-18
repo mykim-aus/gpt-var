@@ -1,5 +1,5 @@
 import { OpenAI } from "openai";
-export default class GPTVAR {
+declare class GPTVAR {
     openai: OpenAI;
     model: string;
     constructor(apiKey: string, model?: string);
@@ -10,3 +10,4 @@ export default class GPTVAR {
     processResponse(response: any, format: string): any;
     extractAndParse(content: string, format: string): any;
 }
+export default GPTVAR;

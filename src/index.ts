@@ -1,6 +1,6 @@
 import { OpenAI } from "openai";
 
-export default class GPTVAR {
+class GPTVAR {
   openai: OpenAI;
   model: string;
 
@@ -81,3 +81,6 @@ export default class GPTVAR {
     return false;
   }
 }
+
+export default GPTVAR;
+module.exports = GPTVAR;
