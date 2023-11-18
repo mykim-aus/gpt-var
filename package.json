@@ -2,7 +2,6 @@
   "name": "gpt-var",
   "version": "1.0.13",
   "main": "./dist/cjs/index.js",
-  "type": "commonjs",
   "license": "MIT",
   "scripts": {
     "test": "jest",
