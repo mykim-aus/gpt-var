@@ -2,7 +2,7 @@
 
 ## Overview
 
-`GPTVAR` facilitates easy communication with the OpenAI API, enabling the seamless sending of prompts and receiving of responses. Primarily designed for GPT-3.5, it can be adapted for other models, simplifying the creation of values for variables using GPT-generated content.
+`GPTVAR` facilitates easy communication with the OpenAI API, enabling the seamless sending of prompts and receiving of responses. it can be adapted for other models, simplifying the creation of values for variables using GPT-generated content.
 
 ## Prerequisites
 
