@@ -1,7 +1,8 @@
 {
   "name": "gpt-var",
   "version": "1.0.12",
-  "main": "src/index.js",
+  "main": "./dist/cjs/index.js",
+  "type": "commonjs",
   "license": "MIT",
   "scripts": {
     "test": "jest",
