@@ -32,6 +32,14 @@ export default class GPTVAR {
   }
 
   processResponse(response: any, format: string): any {
+    const validFormats = ["any", "array", "object"];
+
+    if (!validFormats.includes(format)) {
+      throw new Error(
+        "Invalid format. Please use 'any', 'array', or 'object'."
+      );
+    }
+
     const content = response.choices[0]?.message?.content ?? "";
     if (format === "any") return content;
 
