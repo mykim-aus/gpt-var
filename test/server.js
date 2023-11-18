@@ -1,11 +1,11 @@
-import express from "express";
-import bodyParser from "body-parser";
-import GPTVAR from "gpt-var";
-import "dotenv/config";
-// const express = require("express");
-// const bodyParser = require("body-parser");
-// const GPTVAR = require("gpt-var");
-// require("dotenv").config();
+// import express from "express";
+// import bodyParser from "body-parser";
+// import GPTVAR from "gpt-var";
+// import "dotenv/config";
+const express = require("express");
+const bodyParser = require("body-parser");
+const GPTVAR = require("gpt-var");
+require("dotenv").config();
 
 const app = express();
 const port = 3030;
