@@ -74,4 +74,6 @@ class GPTVAR {
     }
 }
 exports.default = GPTVAR;
-module.exports = GPTVAR;
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = GPTVAR;
+}
