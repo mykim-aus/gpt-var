@@ -11,6 +11,10 @@ export default class GPTVAR {
 
   async prompt(messages: string, format: string = "any"): Promise<any> {
     try {
+      if (!this.isValidFormat(format)) {
+        throw new Error("Invalid format. Please use valid format.");
+      }
+
       const formattedMessage = this.formatMessage(messages, format);
       const response = await this.sendRequest(formattedMessage);
       return this.processResponse(response, format);
@@ -18,6 +22,11 @@ export default class GPTVAR {
       console.error("Error:", error);
       throw error;
     }
+  }
+
+  isValidFormat(format: string): boolean {
+    const validFormats = ["any", "array", "object", "objectInArray"];
+    return validFormats.includes(format);
   }
 
   formatMessage(message: string, format: string): string {
@@ -32,14 +41,6 @@ export default class GPTVAR {
   }
 
   processResponse(response: any, format: string): any {
-    const validFormats = ["any", "array", "object", "objectInArray"];
-
-    if (!validFormats.includes(format)) {
-      throw new Error(
-        "Invalid format. Please use 'any', 'array', 'object', or 'objectInArray'."
-      );
-    }
-
     const content = response.choices[0]?.message?.content ?? "";
     if (format === "any") return content;
 
